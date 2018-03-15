@@ -1,61 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/styles.css">
+	<meta description="Надоело считать недели? Просто зайди и посмотри!">
+	<meta keywords="Учебная, неделя, сейчас, какая, узнать, учебную, неделю, не знаю, идет">
+	<script type="text/javascript" src="js/define-week.js"></script>
 	<title>Какая сейчас учебная неделя</title>
 </head>
 <body>
-	
-	<script type="text/javascript">
-
-		window.onload = function() {
-
-		Date.prototype.getWeek = function() {
-		  var date = new Date(this.getTime());
-		  date.setHours(0, 0, 0, 0);
-		  date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
-		  var week1 = new Date(date.getFullYear()-1, 8, 1);
-		  var result = 1 + Math.round(
-		  	((date.getTime() - week1.getTime()) / 86400000 - 3 + (week1.getDay() + 6) % 7) / 7
-		  );
-		  return result;
-		};
-
-		Date.prototype.getWeekYear = function() {
-		  var date = new Date(this.getTime());
-		  date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
-		  return date.getFullYear();
-		};
-
-		var date = new Date();
-		var curWeekNumber = date.getWeek();
-
-		var week_status = document.getElementById('week_status');
-		var week_number = document.getElementById('week_number');
-
-		if(curWeekNumber % 2 == 0) {
-			week_status.innerText = 'чётная';
-		} else {
-			week_status.innerText = 'нечётная';
-		}
-		week_number.innerText = curWeekNumber;
-
-		};
-	
-	</script>
-
 	<p>
 		<video width="200" autoplay loop>
 			<source src="giphy.mp4" type="video/mp4">
 		</video>
 	</p>
-	
 	<h1>
 		<span class="week-status" id="week_status"></span> 
 		<span class="week-number" id="week_number"></span> 
 		неделя учебы идет сейчас
 	</h1>
-
 </body>
 </html>
