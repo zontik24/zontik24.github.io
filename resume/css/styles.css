@@ -1,0 +1,37 @@
+.container {
+	width: 900px;
+}
+
+section .title {
+	font-weight: bold;
+}
+
+ul li {
+	list-style: circle !important;
+}
+
+ul {
+	margin-left: 20px;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.logo {
+	padding-right: 40px;
+}
+
+.general {
+	margin-top: 50px;
+}
+
+.general h6 {
+	font-size: 15px;
+}
+
+.clarification {
+	background: #ddd;
+	border-radius: 5px;
+	padding: 5px;
+}
